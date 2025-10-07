@@ -23,8 +23,8 @@ while(strcmp(input,"E")!=0)
         if(strcmp(input,"H")==0)
                 {
                 fscanf(fp1,"%s",pn);
-                fscanf(fp1,"%x",add);
-                        fscanf(fp1,"%x",length);
+                fscanf(fp1,"%hhx",add);
+                        fscanf(fp1,"%hhx",length);
                         fscanf(fp1,"%s",input);
                 }
                 if(strcmp(input,"T")==0)
@@ -45,7 +45,7 @@ while(strcmp(input,"E")!=0)
                                 if(relocbit=='0')
                                         actualadd=addr;
                                 else
-                                        actualaddr=addr+start;
+                                        actualadd=addr+start;
                                 fprintf(fp2,"\n%x\t\t%x%x\n",address,opcode,actualadd);
                                 address+=3;
                         }
@@ -55,7 +55,7 @@ while(strcmp(input,"E")!=0)
         fprintf(fp2,"_______________\n");
         fclose(fp1);
         fclose(fp2);
-        printf("\n\nThe content of output file(ROutput)")
+        printf("\n\nThe content of output file(ROutput)");
         fp2=fopen("ROutput.txt","r");
         ch=fgetc(fp2);
         while(ch!=EOF)
